@@ -1,0 +1,18 @@
+Examples:
+geometry problem:
+"Two circles G1 and G2 intersect at two points M and N. Let AB be the line tangent to these circles at A and B, respectively, so that M lies closer to AB than N. Let CD be the line parallel to AB and passing through the point M, with C on G1 and D on G2. Lines AC and BD meet at E; lines AN and CD meet at P; lines BN and CD meet at Q. Show that EP = EQ."
+Formal Language:
+g1 = circle G1, g2 = circle G2, m = intersection M g1 g2, n = intersection N g1 g2, a = tangent_point A g1 m, b = tangent_point B g2 m, ab = segment A B, c = on_pline C m a b, d = on_pline D m a b, cd = segment C D, e = intersection_point E a c b d, p = intersection_point P a n c d, q = intersection_point Q b n c d ? ep = eq.
+
+geometry problem:
+"Given triangle ABC the point J is the centre of the excircle opposite the vertex A. This excircle is tangent to the side BC at M, and to the lines AB and AC at K and L, respectively. The lines LM and BJ meet at F, and the lines KM and CJ meet at G. Let S be the point of intersection of the lines AF and BC, and let T be the point of intersection of the lines AG and BC. Prove that M is the midpoint of ST"
+Formal Language:
+a b c = triangle a b c; m l k j = excenter2 m l k j a b c; f = on_line f m l, on_line f b j; g = on_line g m k, on_line g c j; s = on_line s f a, on_line s b c; t = on_line t g a, on_line t c b ? cong m s m t
+
+geometry problem:
+"In triangle ABC the bisector of ∠BCA meets the circumcircle again at R, the perpendicular bisector of BC at P, and the perpendicular bisector of AC at Q. The midpoint of BC is K and the midpoint of AC is L. Prove that the triangles RPK and RQL have the same area."
+Formal language:
+a b c = triangle a b c; o = circle o a b c; r = on_circle r o a, on_bline r a b; l = midpoint l c a; k = midpoint k c b; p = on_line p o k, on_line p c r; q = on_line q o l, on_line q c r; l1 = foot l1 l c r; k1 = foot k1 k c r ? eqratio k k1 l l1 r q r p
+
+
+Convert the following geometric problem into a formal language like the form of the above samples :
