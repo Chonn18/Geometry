@@ -1197,7 +1197,7 @@ def _draw(
     highlight(ax, name, args, lcolor, color1, color2)
 
 
-THEME = 'dark'
+THEME = 'light'
 
 
 def set_theme(theme) -> None:
@@ -1218,8 +1218,8 @@ def draw(
     highlights: list[tuple[str, list[gm.Point]]] = None,
     equals: list[tuple[Any, Any]] = None,
     block: bool = True,
-    save_to: str = None,
-    theme: str = 'dark',
+    save_to: str = '/home/duongvanchon/Documents/project/Geometry/backend/api/output/output_image.png',
+    theme: str = THEME,
 ) -> None:
   """Draw everything on the same canvas."""
   plt.close()
@@ -1243,8 +1243,9 @@ def draw(
     ymin = min([p.num.y for p in points])
     ymax = max([p.num.y for p in points])
     plt.margins((xmax - xmin) * 0.1, (ymax - ymin) * 0.1)
-
-  plt.show(block=block)
+  if save_to:
+    plt.savefig(save_to, bbox_inches='tight', pad_inches=0)
+  # plt.show(block=block)
 
 
 def close_enough(a: float, b: float, tol: float = 1e-12) -> bool:

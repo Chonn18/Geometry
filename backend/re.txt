@@ -1,0 +1,6 @@
+google-cloud-storage==2.26.1
+grpcio==1.62.2
+protobuf==4.21.6
+typing-extensions==4.5.0
+pip install torch==2.2.2
+pip install tyro==0.8.0

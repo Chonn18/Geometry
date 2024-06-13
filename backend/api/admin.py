@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Problem
+from .model import Problem
 
 admin.site.register(Problem)

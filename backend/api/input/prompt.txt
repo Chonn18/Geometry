@@ -1,0 +1,59 @@
+bạn là GPT-3.5, tôi muốn chuyển đổi đề toán hình thành dạng formal như ví dụ bên dưới với các mô tả hình học ở dạng formal được xây dựng trong phần dưới.
+đây là ví dụ của 1 đề toán hình ở dạng ngôn ngữ tự nhiên và formal:
+ - geometry problem: "In triangle ABC the bisector of ∠BCA meets the circumcircle again at R, the perpendicular bisector of BC at P, and the perpendicular bisector of AC at Q. The midpoint of BC is K and the midpoint of AC is L. Prove that the triangles RPK and RQL have the same area."
+ - formal: a b c = triangle a b c; o = circle o a b c; r = on_circle r o a, on_bline r a b; l = midpoint l c a; k = midpoint k c b; p = on_line p o k, on_line p c r; q = on_line q o l, on_line q c r; l1 = foot l1 l c r; k1 = foot k1 k c r ? eqratio k k1 l l1 r q r p
+
+các dòng sau đây cung cấp một loạt các nhiệm vụ xây dựng hình học bằng cách sử dụng các thuật ngữ cụ thể để biểu thị các thực thể và hoạt động hình học khác nhau.
+Construction : Description
+X= angle bisector(A, B, C) X= angle mirror(A, B, C) : Construct a point X on the angle bisector of ∠ABC
+X = circle(A, B, C) : Construct a point X such that BC is the bisector of ∠ABX
+A, B, C, D = eq_quadrilateral() : Construct point X as the circumcenter of A, B, C
+A, B, C, D = eq_trapezoid() : Construct quadrilateral ABCD with AD = BC
+X= eqtriangle(B, C) Xeqangle2(A, B, C) : Construct trapezoid ABCD with AD = BC
+A,B,C,D = eqdia_equadrilateral() : Construct X such that XBC is an equilateral triangle
+X= eqdistance(A, B, C) X = foot(A, B, C) : Construct X such that ∠BAX= ∠XCB
+X = free : Construct quadrilateral ABCD with AC = BD
+X= incenter(A, B, C) : Construct X such that XA = BC
+X,Y,Z,I= incenter2(A, B, C) : Construct X as the foot of A on BC
+X = excenter(A, B, C) : Construct a free point X
+X,Y,Z,I= excenter2(A,B,C) : Construct X as the incenter of ABC
+X = centroid (A,B,C) : Construct I as the incenter of ABC with touchpoints X, Y, Z
+X,Y,Z,I= midpointcircle(A,B,C) : Construct X as the excenter of ABC
+A,B,C = isos() : Construct X as the excenter of ABC with touchpoints X,Y,Z
+X= tangent(O, A) : Construct X as the centroid of ABC
+X = midpoint(A, B) : Construct X, Y, Z as the midpoints of triangle ABC, and I as the circumcenter of XYZ Construct A, B, C such that AB = AC
+X = mirror(A, B) : Construct X such that OA is perpendicular to AX
+X= rotate90(A, B) : Construct X as the midpoint of AB
+X=on_aline(A, B, C, D, E) : Construct X such that B is the midpoint of AX
+X= on_bline(X, A, B) : Construct X such that AXB is a right isosceles triangle
+X=on_circle(O, A) : Construct X such that ∠XAB= ∠CDE
+X = on_line(A, B) : Construct X on the perpendicular bisector of AB
+X=on_pline(A, B, C) : Construct X such that OA = OX
+X = on_tline(A, B, C) : Construct X on line AB
+X= orthocenter(A, B, C) : Construct X such that XA is parallel to BC
+X = parallelogram(A, B, C) : Construct X such that XA is perpendicular to BC Construct X as the orthocenter of ABC
+A, B, C, D, E pentagon() : Construct X such that ABCX is a parallelogram
+A, B, C, D = quadrilateral() : Construct pentagon ABCDE
+A, B, C, D = trapezoid() : Construct quadrilateral ABCD
+A, B, C = r_triangle() : Construct right trapezoid ABCD
+A, B, C, D rectangle() : Construct right triangle ABC
+X= reflect(A, B, C) : Construct rectangle ABCD
+A, B, C = risos() : Construct X as the reflection of A about BC
+X= angle(A, B, a) : Construct right isosceles triangle ABC
+A, B = segment() : Construct X such that ∠ABX= a
+X = shift(B, C, D) : Construct two distinct points A, B
+XY square(A, B) : Construct point X such that XB-CD and XC-BD
+A, B, C, D = init_square() : Construct X, Y such that XYAB is a square
+A, B, C, D = trapezoid() : Construct square ABCD
+A, B, C = triangle() : Construct trapezoid ABCD
+A, B, C triangle12() : Construct triangle ABC
+X,Y,Z,I= 2L1C(A, B, C, O) : Construct trianglel ABC with AB:AC = 1:2
+X, Y, Z = 3PEQ(A, B, C) : Construct circle center I that touches line AC and line BC and circle (O, A) at X, Y, Z
+X, Y = trisect(A, B, C) : Construct X, Y, Z on three sides of triangle ABC such that Y is the midpoint of XZ
+X, Y trisegment(A, B) : Construct X, Y on AC such that BX and BY trisect ZABC
+X = on_dia(A, B) : Construct X, Y on segment AB such that AX=XY=YB Construct point X such that AX is perpendicular to BX
+A, B, C ieqtriangle() : Construct equilateral triangle ABC
+X, Y, Z, T= cc_tangent(O, A, W, B) : Construct common tangents of circles (O, A) and (W, B) with touchpoints X, Y for one tangent and Z, T for the other.
+X= eqangle3(A, B, D, E, F) : Construct point X such that ∠AXB = ∠EDF
+X, Y tangent(A, O, B) : Construct points X, Y as the tangent touch points from A to circle (O, B)
+X= intersect(f, g) : Construct point X as the intersection of two functions f() and g() where f() and g() is any of the above functions that returns more than one possible construction.

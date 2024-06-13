@@ -3,10 +3,12 @@ from django.core.validators import MaxValueValidator
 
 # Create your models here.
 class Problem(models.Model):
-    description = models.TextField(blank=True, null=True)
+    title = models.TextField(max_length=100, null=False)
+    description = models.TextField(blank=True, null=False)
     solve = models.TextField(blank=True, null=True)
     image = models.TextField(blank=True, null=True)
-    file = models.TextField(blank=True, null=True)
+    image_result = models.TextField(blank=True, null=True)
+    category = models.TextField(blank=True, null=True)
 
 # class Product(models.Model) : 
 #     title = models.CharField(max_length=100, null=True)

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import socket
+import os
 
 HOSTNAME = socket.gethostname() 
 IPAddress = socket.gethostbyname(HOSTNAME)
@@ -91,6 +92,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+FIREBASE_CREDENTIALS = os.path.join('/home/duongvanchon/Documents/project/firebase.json')
 
 
 # Password validation
@@ -123,6 +125,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+HOST = "http://localhost:8000/"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
