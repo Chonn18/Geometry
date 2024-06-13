@@ -3,3 +3,4 @@ backend/backend/*.json
 
 # Ignore Python files with API keys
 alphageometry/trans_text.py
+backend/api/gpt.py
