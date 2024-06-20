@@ -3,9 +3,10 @@
     {
       "pid": "input_diagram",
       "target": "['Value', 'x']",
-      "guess": 42.0,
-      "steps": 17,
+      "guess": 41.99999999999998,
+      "steps": 18,
       "step_lst": [
+        17,
         1,
         2,
         3,
@@ -24,7 +25,7 @@
         16,
         17
       ],
-      "time": 1.72,
+      "time": 1.24,
       "choice": "unavailable"
     }
   ],
@@ -35,11 +36,11 @@
     "input_diagram"
   ],
   "unsolved_list": [],
-  "avg_solve_time": 1.72,
-  "avg_solved_time": 1.72,
-  "avg_solve_step": 17.0,
-  "avg_solved_step": 17.0,
-  "real_time": 7,
+  "avg_solve_time": 1.24,
+  "avg_solved_time": 1.24,
+  "avg_solve_step": 18.0,
+  "avg_solved_step": 18.0,
+  "real_time": 5,
   "problem_data_version": "input/data.json",
   "text_logic_version": "output/text/text_logic_forms.json",
   "diagram_logic_version": "output/diagram/diagram_logic_forms.json"

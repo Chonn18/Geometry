@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ProblemListView, SolveProblemNoImgView, SolveWithPSPG, Viewdata, CheckData, SolveInter
+from .views import ProblemListView, SolveProblemNoImgView, SolveWithPSPG, Viewdata, CheckData, SolveInter, Translated, OCR,SolveInter2
 from rest_framework import routers 
 from django.urls import path, include, re_path
 from drf_yasg.views import get_schema_view
@@ -30,6 +30,9 @@ urlpatterns = [
     path('problems/solve_no_img/', SolveProblemNoImgView.as_view(), name='solve_problem'),
     path('problems/viewdata/', Viewdata.as_view(), name='viewdata'),
     path('problems/solve_pgps/', SolveWithPSPG.as_view(), name='solve_pgps'),
-    path('problems/check_data', CheckData.as_view(),name = 'check_data'),
-    path('problems/solve_inter', SolveInter.as_view(),name = 'solve_inter'),
+    path('problems/check_data/', CheckData.as_view(),name = 'check_data'),
+    path('problems/solve_inter/', SolveInter.as_view(),name = 'solve_inter'),
+    path('problems/solve_inter2/', SolveInter2.as_view(),name = 'solve_inter2'),
+    path('problems/translated/', Translated.as_view(), name='translated'),
+    path('problems/ocr_image/', OCR.as_view(), name='ocr_image'),
 ]

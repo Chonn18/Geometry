@@ -126,5 +126,7 @@ def run(problem :str):
 
     try:
         subprocess.run(cmd, env=env, check=True)
+        return True
     except subprocess.CalledProcessError as e:
         print(f"Error occurred: {e}")
+        return False

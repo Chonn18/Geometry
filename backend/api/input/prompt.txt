@@ -1,10 +1,12 @@
-bạn là GPT-3.5, tôi muốn chuyển đổi đề toán hình thành dạng formal như ví dụ bên dưới với các mô tả hình học ở dạng formal được xây dựng trong phần dưới.
-đây là ví dụ của 1 đề toán hình ở dạng ngôn ngữ tự nhiên và formal:
- - geometry problem: "In triangle ABC the bisector of ∠BCA meets the circumcircle again at R, the perpendicular bisector of BC at P, and the perpendicular bisector of AC at Q. The midpoint of BC is K and the midpoint of AC is L. Prove that the triangles RPK and RQL have the same area."
- - formal: a b c = triangle a b c; o = circle o a b c; r = on_circle r o a, on_bline r a b; l = midpoint l c a; k = midpoint k c b; p = on_line p o k, on_line p c r; q = on_line q o l, on_line q c r; l1 = foot l1 l c r; k1 = foot k1 k c r ? eqratio k k1 l l1 r q r p
+I want to convert the problem to a formal like the following example with the formal geometric descriptions built in below.
+Here is an example of a geometry problem in natural and formal language:
+ - geometry problem: "Let ABCD be a cyclic quadrilateral. Let P, Q and R be the feet of perpendiculars from D to lines BC, CA and AB, respectively. Show that PQ = QR if and only if the bisectors of angles ABC and ADC meet on segment AC."
+ - formal: "a b c = triangle a b c; o = circle o a b c; b1 = on_circle b1 o a, on_bline b1 c a; d1 = on_circle d1 o a, on_bline d1 c a; x = on_line x b b1, on_line x a c; d = on_line d d1 x, on_circle d o a; p = foot p d b c; q = foot q d c a; r = foot r d a b ? cong p q q r"
 
-các dòng sau đây cung cấp một loạt các nhiệm vụ xây dựng hình học bằng cách sử dụng các thuật ngữ cụ thể để biểu thị các thực thể và hoạt động hình học khác nhau.
-Construction : Description
+The following lines are information in formal and their explanations. In the Description section is the basic explanation. If the expression is different and the information in natural language is similar, the result will be converted to the same formal.
+formal : Description
+Q1 = on_line Q A1, let Q1 be a point on ray QA1
+Q = on_line A A1, Q be points on segments AA1
 X= angle bisector(A, B, C) X= angle mirror(A, B, C) : Construct a point X on the angle bisector of ∠ABC
 X = circle(A, B, C) : Construct a point X such that BC is the bisector of ∠ABX
 A, B, C, D = eq_quadrilateral() : Construct point X as the circumcenter of A, B, C
